@@ -1,8 +1,8 @@
 {
     "dataProductDescriptor": "1.0.0",
     "info": {
-        "name": "StreamingTrips",
-        "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:streamingTrips:1",
+        "name": "realtimetrip",
+        "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:realtimetrip:1",
         "version": "1.0.0",
         "domain": "Transport Management",
         "owner": {
@@ -23,12 +23,8 @@
         ],
         "outputPorts": [
             {
-                "description": "This port exposes the average duration of all trips by category",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripsavgdurationbycategory-oport.json"
-            },
-            {
                 "description": "This port expose all modifications in the status of each trip as events",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripsevents-oport.json"
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/trips-oport.json"
             }
         ]
     },
