@@ -1,18 +1,19 @@
 {
-    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:tripExecution:1:outputports:tripEvents",
-    "name": "tripEvents",
-    "displayName": "Trip Events",
-    "description": "This port exposes a *stream of events* related to the `Trip` entity",
-    "version": "1.2.0",
+    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:realtimetrip:1:outputports:trips",
+    "entityType": "outputport",
+    "name": "trips",
+    "version": "1.0.0",
+    "displayName": "trips",
+    "description": "Topic that collects all trips",
     "promises": {
-        "platform": "westeurope.azure:confluent",
+        "platform": "aws:centraleurope",
         "serviceType": "streaming-services",
         "api": {
             "specification": "asyncapi",
             "version": "2.5.0",
             "definition": {
                 "mediaType": "text/json",
-                "$href": "https://github.com/opendatamesh-initiative/odm-specification-dpdescriptor/blob/main/examples/tripexecution/ports/trip-events-oport-api.json"
+                "$href": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/trips-oport-api.json"
             },
             "externalDocs": {
                 "description": "The AsyncAPI v2.5.0 specification used to define the API of this port",
@@ -35,7 +36,7 @@
             }
         }
     },
-    "expectatctions": {
+    "expectations": {
         "audience": {
             "description": "This port is designed to help operations departments. It is not for customer care and finance departments",
             "x-includes": [
@@ -52,7 +53,7 @@
             "description": "A detailed description of the data product, that include also the target audience",
             "externalDocs": {
                 "mediaType": "text/html",
-                "$href": "https://wiki.example-xyz.com/corporate-mesh/dp/trip-execution.html#terms-and-conditions"
+                "$href": "https://wiki.example-xyz.com/corporate-mesh/dp/trips.html#terms-and-conditions"
             }
         },
         "billingPolicy": {
@@ -71,5 +72,8 @@
                 "freshness": "10m"
             }
         }
-    }
+    },
+    "tags": [
+        "confluentCloud"
+    ]
 }

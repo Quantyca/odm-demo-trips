@@ -1,0 +1,62 @@
+{
+    "asyncapi": "2.5.0",
+    "info": {
+        "title": "Trips generated from system A",
+        "version": "1.0.0",
+        "description": "All events generated from system A"
+    },
+    "servers": {
+        "test": {
+            "connectionString": "pkc-zpjg0.eu-central-1.aws.confluent.cloud:9092",
+            "description": "Confluent Cloud bootstrap servers",
+            "protocol": "kafka",
+            "protocolVersion": "latest",
+            "bindings": {
+                "kafka": {
+                    "schemaRegistryUrl": "https://psrc-95km5.eu-central-1.aws.confluent.cloud",
+                    "schemaRegistryVendor": "confluent"
+                }
+            }
+        }
+    },
+    "defaultContentType": "avro/binary",
+    "channels": {
+        "tripsFromSystemA": {
+            "description": "Topic that collects all trips generated from system A",
+            "subscribe": {
+                "operationId": "readTripsFromSystemA",
+                "security": [
+                    {
+                        "apiKey": []
+                    }
+                ],
+                "message": {
+                    "messageId": "trips-value",
+                    "contentType": "avro/binary",
+                    "schemaFormat": "application/vnd.apache.avro",
+                    "payload": {
+                        "$ref": "./infra/terraform/modules/schema/tripsFromSystemA.avsc#/tripsFromSystemA"
+                    },
+                    "bindings": {
+                        "kafka": {
+                            "schemaIdPayloadEncoding": "confluent",
+                            "schemaLookupStrategy": "TopicIdStrategy",
+                            "key": {
+                                "type": "string",
+                                "enum": ["id"]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "apiKey": {
+                "type": "apiKey",
+                "in": "user"
+            }
+        }
+    }
+}

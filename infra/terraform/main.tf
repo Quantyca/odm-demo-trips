@@ -35,10 +35,3 @@ module "schema" {
   confluent_schema_registry_secret = var.schema_registry_secret
   source = "./modules/schema"
 }
-
-module "ksqldb" {
-  confluent_kafka_cluster = data.confluent_kafka_cluster.dev-cluster
-  confluent_cloud_environment = data.confluent_environment.environment
-  confluent_schema_registry = data.confluent_schema_registry_cluster.schemaregistry
-  source = "./modules/ksqldb"
-}
