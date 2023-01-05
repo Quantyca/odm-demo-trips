@@ -1,0 +1,30 @@
+{
+  "type": "record",
+  "namespace": "com.example",
+  "name": "tripsFromSystemB",
+  "doc": "Trips from system B",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int",
+      "doc": "The primary key of a trip"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "doc": "The status of a trip"
+    },
+    {
+      "name": "startTs",
+      "type": "long",
+      "logicalType": "timestamp-micros",
+      "doc": "The timestamp of the beginning of the trip"
+    },
+    {
+      "name": "currentTs",
+      "type": "long",
+      "logicalType": "timestamp-micros",
+      "doc": "The timestamp of this event"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+    "dataProductDescriptor": "1.0.0",
+    "info": {
+        "name": "StreamingTrips",
+        "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:streamingTrips:1",
+        "version": "1.0.0",
+        "domain": "Transport Management",
+        "owner": {
+            "id": "john.doe@company-xyz.com",
+            "name": "John Doe"
+        }
+    },
+    "interfaceComponents": {
+        "inputPorts": [
+            {
+                "description": "Through this port trip data is ingested from system A",
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripsFromSystemA-iport.json"
+            },
+            {
+                "description": "Through this port trip data is ingested from system B",
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripsFromSystemB-iport.json"
+            }
+        ],
+        "outputPorts": [
+            {
+                "description": "This port exposes the average duration of all trips by category",
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripsavgdurationbycategory-oport.json"
+            },
+            {
+                "description": "This port expose all modifications in the status of each trip as events",
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripsevents-oport.json"
+            }
+        ]
+    },
+    "internalComponents": {
+        "applicationComponents": [
+            {
+                "description": "The app that processes data coming from system A and B",
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/apps/processingapp.json"
+            }
+        ],
+        "infrastructuralComponents": [
+            {
+                "description": "Confluent Cloud platform is used to store all the events, their schemas and that let the app do some processing",
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/infra/confluentcloud.json"
+            }
+        ]
+    }
+}
