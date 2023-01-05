@@ -31,11 +31,3 @@ FROM tripsFromSystemA EMIT CHANGES;
 INSERT INTO trips 
 SELECT id as tripId, 'B' as tripCategory, "status" as tripStatus, startTs as tripStartTs, currentTs
 FROM tripsFromSystemB EMIT CHANGES;
-
-CREATE TABLE AvgDurationByCategory AS
-  SELECT tripCategory,
-         AVG(currentTs - tripStartTs) AS AVG_DURATION
-  FROM trips
-  WHERE tripStatus = 'ENDED'
-  GROUP BY tripCategory
-  EMIT CHANGES;
