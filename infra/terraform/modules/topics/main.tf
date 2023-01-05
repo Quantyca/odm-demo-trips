@@ -17,12 +17,7 @@ terraform {
 
 resource "confluent_kafka_topic" "tripsFromSystemA" {
   kafka_cluster {
-    id = var.confluent_kafka_cluster.id
-  }
-  rest_endpoint = var.confluent_kafka_cluster.rest_endpoint
-  credentials {
-    key    = var.confluent_kafka_cluster_key
-    secret = var.confluent_kafka_cluster_secret
+    id = var.cluster_id
   }
   config = {
     "confluent.value.schema.validation" = "true",
@@ -33,12 +28,7 @@ resource "confluent_kafka_topic" "tripsFromSystemA" {
 }
 resource "confluent_kafka_topic" "tripsFromSystemB" {
   kafka_cluster {
-    id = var.confluent_kafka_cluster.id
-  }
-  rest_endpoint = var.confluent_kafka_cluster.rest_endpoint
-  credentials {
-    key    = var.confluent_kafka_cluster_key
-    secret = var.confluent_kafka_cluster_secret
+    id = var.cluster_id
   }
   config = {
     "confluent.value.schema.validation" = "true",
@@ -49,12 +39,7 @@ resource "confluent_kafka_topic" "tripsFromSystemB" {
 }
 resource "confluent_kafka_topic" "trips" {
   kafka_cluster {
-    id = var.confluent_kafka_cluster.id
-  }
-  rest_endpoint = var.confluent_kafka_cluster.rest_endpoint
-  credentials {
-    key    = var.confluent_kafka_cluster_key
-    secret = var.confluent_kafka_cluster_secret
+    id = var.cluster_id
   }
   config = {
     "confluent.value.schema.validation" = "true",

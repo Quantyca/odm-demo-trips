@@ -1,1 +1,0 @@
-variable "confluent_cloud_environment" {}

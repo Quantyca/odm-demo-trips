@@ -1,8 +1,3 @@
-variable "data_product" {
-    type = string
-    description = "Data Product name. Used in topic and connectors names."
-}
-
 variable "confluent_cloud_api_key" {
     type = string
     description = "Confluent Cloud API KEY. Go to the Confluent Cloud console with an admin account to retrieve this."
@@ -15,51 +10,41 @@ variable "confluent_cloud_api_secret" {
     sensitive = true
 }
 
-#variable "kafka_api_key" {
-#    type = string
-#    description = "Cluster API KEY. Go to the Confluent Cloud console to retrieve this."
-#    sensitive = true
-#}
-
-#variable "kafka_api_secret" {
-#    type = string
-#    description = "Cluster API Secret. Go to the Confluent Cloud console to retrieve this."
-#    sensitive = true
-#}
-
-#variable "env_id" {
-#    type = string
-#    description = "Confluent Cloud Environment ID. Go to the Confluent Cloud console, in Cluster Setting page, to retrieve this."
-#}
-
-#variable "cluster_id" {
-#    type = string
-#    description = "Confluent Cloud Cluster ID. Go to the Confluent Cloud console, in Cluster Setting page, to retrieve this."
-#}
-
-#variable "rest_endpoint" {
-#    type = string
-#    description = "Confluent Cloud Cluster REST Endpoint. Go to the Confluent Cloud console, in Cluster Setting page, to retrieve this."
-#}
-
-#variable "bootstrap_servers" {
-#    type = string
-#}
-
-#variable "schema_registry_url" {
-#    type = string
-#}
-
-#variable "schema_registry_config" {
-#    type = string
-#}
-
-variable "confluent_cloud_provider" {
-    type = string
+variable "kafka_api_key" {
+   type = string
+   description = "Cluster API KEY. Go to the Confluent Cloud console to retrieve this."
+   sensitive = true
 }
-variable "confluent_cloud_region" {
-    type = string
+
+variable "kafka_api_secret" {
+   type = string
+   description = "Cluster API Secret. Go to the Confluent Cloud console to retrieve this."
+   sensitive = true
 }
-variable "confluent_cloud_environment" {
-    type = string
+
+variable "env_id" {
+   type = string
+   description = "Confluent Cloud Environment ID. Go to the Confluent Cloud console, in Cluster Setting page, to retrieve this."
+}
+
+variable "cluster_id" {
+   type = string
+   description = "Confluent Cloud Cluster ID. Go to the Confluent Cloud console, in Cluster Setting page, to retrieve this."
+}
+
+variable "rest_endpoint" {
+   type = string
+   description = "Confluent Cloud Cluster REST Endpoint. Go to the Confluent Cloud console, in Cluster Setting page, to retrieve this."
+}
+
+variable "schema_registry_url" {
+   type = string
+}
+
+variable "schema_registry_key" {
+   type = string
+}
+
+variable "schema_registry_secret" {
+   type = string
 }
