@@ -2,16 +2,14 @@ CREATE STREAM tripsFromSystemA
   (tripId BIGINT,
    tripCategory VARCHAR,
    tripStatus VARCHAR,
-   tripStartTs TIMESTAMP,
-   currentTs TIMESTAMP)
+   tripStartTs TIMESTAMP)
   WITH (KAFKA_TOPIC='tripsFromSystemA',
         VALUE_FORMAT='AVRO');
 
 CREATE STREAM tripsFromSystemB
   (id BIGINT,
    "status" VARCHAR,
-   startTs TIMESTAMP,
-   currentTs TIMESTAMP)
+   startTs TIMESTAMP)
   WITH (KAFKA_TOPIC='tripsFromSystemB',
         VALUE_FORMAT='AVRO');
 
@@ -19,8 +17,7 @@ CREATE STREAM trips
   (tripId BIGINT,
    tripCategory VARCHAR,
    tripStatus VARCHAR,
-   tripStartTs TIMESTAMP,
-   currentTs TIMESTAMP)
+   tripStartTs TIMESTAMP)
    WITH (KAFKA_TOPIC='trips',
         VALUE_FORMAT='AVRO');
 

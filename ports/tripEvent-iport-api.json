@@ -1,9 +1,9 @@
 {
     "asyncapi": "2.5.0",
     "info": {
-        "title": "Trips generated from system B",
+        "title": "Events related to trips",
         "version": "1.0.0",
-        "description": "All events generated from system B"
+        "description": "All events related to trips"
     },
     "servers": {
         "test": {
@@ -21,10 +21,10 @@
     },
     "defaultContentType": "avro/binary",
     "channels": {
-        "tripsFromSystemB": {
-            "description": "Topic that collects all trips generated from system B",
+        "tripEvents": {
+            "description": "Topic that collects all events related to trips",
             "subscribe": {
-                "operationId": "readTripsFromSystemB",
+                "operationId": "readTripEvents",
                 "security": [
                     {
                         "apiKey": []
@@ -35,7 +35,7 @@
                     "contentType": "avro/binary",
                     "schemaFormat": "application/vnd.apache.avro",
                     "payload": {
-                        "$ref": "./infra/terraform/modules/schema/tripsFromSystemB.avsc#/tripsFromSystemB"
+                        "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripEvent-iport-schema.avsc"
                     },
                     "bindings": {
                         "kafka": {

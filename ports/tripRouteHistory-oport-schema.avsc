@@ -1,0 +1,38 @@
+{
+  "type": "record",
+  "namespace": "com.example",
+  "name": "tripRouteHistory",
+  "doc": "The tracking of all the positions recorded for each trip",
+  "fields": [
+    {
+      "name": "tripId",
+      "type": "int",
+      "logicalType": "smallint",
+      "doc": "The unique identifier of a trip"
+    },
+    {
+      "name": "vectorPositionId",
+      "type": "int",
+      "logicalType": "smallint",
+      "doc": "The id of the position related to the route made by the vector"
+    },
+    {
+      "name": "vectorCurrentPositionLat",
+      "type": "int",
+      "logicalType": "smallint",
+      "doc": "The current latitude of the vector"
+    },
+    {
+      "name": "vectorCurrentPositionLong",
+      "type": "int",
+      "logicalType": "smallint",
+      "doc": "The current longitude of the vector"
+    },
+    {
+      "name": "eventTimestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis",
+      "doc": "The timestamp when the vector reached the position"
+    }
+  ]
+}

@@ -26,3 +26,4 @@ The following resources must already exists in your confluent cloud account:
 * understand how to treat in a single centralized place all variables used for port and asyncapi schema definitions
 * add second outputport that computes average trip duration by category (after completing first version of data product)
 * the schemas used in the topics at the moment are saved only in terraform dir and then referenced from asyncapi schema definition: is this fine?
+* EDIT: connection_string and security in input and output ports to specify the values related to your environment 

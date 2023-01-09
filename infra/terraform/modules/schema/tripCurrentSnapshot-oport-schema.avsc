@@ -1,0 +1,59 @@
+{
+  "type": "record",
+  "namespace": "com.example",
+  "name": "tripCurrentSnapshot",
+  "doc": "The current snapshot of a trip related to its status and the position of its vector",
+  "fields": [
+    {
+      "name": "tripId",
+      "type": "int",
+      "logicalType": "smallint",
+      "doc": "The unique identifier of a trip"
+    },
+    {
+      "name": "tripCurrentStatus",
+      "doc": "The current status of a trip",
+      "type": {
+        "type": "enum",
+        "name": "tripCurrentStatus",
+        "symbols": [
+          "planned",
+          "booking-started",
+          "booking-ended",
+          "loading-started",
+          "loading-ended",
+          "departed-from-origin",
+          "unloading-at-stop-started",
+          "unloading-at-stop-ended",
+          "loading-at-stop-started",
+          "loading-at-stop-ended",
+          "departed-from-stop",
+          "arrived-at-destination",
+          "unloading-started",
+          "unloading-ended",
+          "completed"
+        ],
+         "default": "planned"  
+      },
+      "default": "planned"
+    },
+    {
+      "name": "vectorCurrentPositionLat",
+      "type": "int",
+      "logicalType": "smallint",
+      "doc": "The current latitude of the vector"
+    },
+    {
+      "name": "vectorCurrentPositionLong",
+      "type": "int",
+      "logicalType": "smallint",
+      "doc": "The current longitude of the vector"
+    },
+    {
+      "name": "eventTimestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis",
+      "doc": "The timestamp of the last update to the trip"
+    }
+  ]
+}

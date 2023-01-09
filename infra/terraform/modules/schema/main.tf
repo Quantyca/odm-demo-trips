@@ -14,40 +14,40 @@ terraform {
 ###########################
 #	    RESOURCES         #
 ###########################
-resource "confluent_schema" "tripsFromSystemA" {
+resource "confluent_schema" "tripEvent" {
   schema_registry_cluster {
     id = var.confluent_schema_registry.id
   }
   format = "AVRO"
   rest_endpoint = var.confluent_schema_registry.rest_endpoint
-  subject_name = "tripsFromSystemA"
-  schema = file("${path.module}/tripsFromSystemA.avsc")
+  subject_name = "tripEvent"
+  schema = file("${path.module}/tripEvent-iport-schema.avsc")
   credentials {
     key    = var.confluent_schema_registry_key
     secret = var.confluent_schema_registry_secret
   }
 }
-resource "confluent_schema" "tripsFromSystemB" {
+resource "confluent_schema" "tripCurrentSnapshot" {
   schema_registry_cluster {
     id = var.confluent_schema_registry.id
   }
   format = "AVRO"
   rest_endpoint = var.confluent_schema_registry.rest_endpoint
-  subject_name = "tripsFromSystemB"
-  schema = file("${path.module}/tripsFromSystemB.avsc")
+  subject_name = "tripCurrentSnapshot"
+  schema = file("${path.module}/tripCurrentSnapshot-oport-schema.avsc")
   credentials {
     key    = var.confluent_schema_registry_key
     secret = var.confluent_schema_registry_secret
   }
 }
-resource "confluent_schema" "trips" {
+resource "confluent_schema" "tripRouteHistory" {
   schema_registry_cluster {
     id = var.confluent_schema_registry.id
   }
   format = "AVRO"
   rest_endpoint = var.confluent_schema_registry.rest_endpoint
-  subject_name = "trips"
-  schema = file("${path.module}/trips.avsc")
+  subject_name = "tripRouteHistory"
+  schema = file("${path.module}/tripRouteHistory-oport-schema.avsc")
   credentials {
     key    = var.confluent_schema_registry_key
     secret = var.confluent_schema_registry_secret

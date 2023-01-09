@@ -1,9 +1,9 @@
 {
     "asyncapi": "2.5.0",
     "info": {
-        "title": "Trips generated from system A",
+        "title": "Route History",
         "version": "1.0.0",
-        "description": "All events generated from system A"
+        "description": "This API exposes all the positions reached from the vector of each trip"
     },
     "servers": {
         "test": {
@@ -21,10 +21,10 @@
     },
     "defaultContentType": "avro/binary",
     "channels": {
-        "tripsFromSystemA": {
-            "description": "Topic that collects all trips generated from system A",
+        "tripRouteHistory": {
+            "description": "Topic that tracks all the positions reached from the vector of each trip",
             "subscribe": {
-                "operationId": "readTripsFromSystemA",
+                "operationId": "readTripRouteHistory",
                 "security": [
                     {
                         "apiKey": []
@@ -35,7 +35,7 @@
                     "contentType": "avro/binary",
                     "schemaFormat": "application/vnd.apache.avro",
                     "payload": {
-                        "$ref": "./infra/terraform/modules/schema/tripsFromSystemA.avsc#/tripsFromSystemA"
+                        "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripRouteHistory-oport-schema.avsc"
                     },
                     "bindings": {
                         "kafka": {

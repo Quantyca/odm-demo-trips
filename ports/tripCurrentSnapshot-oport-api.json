@@ -1,9 +1,9 @@
 {
     "asyncapi": "2.5.0",
     "info": {
-        "title": "Trips Streaming API",
+        "title": "Current snapshot for each trip",
         "version": "1.0.0",
-        "description": "This API exposes all events related to `Trip` entity"
+        "description": "This API exposes the current snapshot for each trip"
     },
     "servers": {
         "test": {
@@ -21,10 +21,10 @@
     },
     "defaultContentType": "avro/binary",
     "channels": {
-        "trips": {
-            "description": "Topic that collects all trips",
+        "tripCurrentSnapshot": {
+            "description": "Topic that tracks the current snapshot of each trip",
             "subscribe": {
-                "operationId": "readTrips",
+                "operationId": "readTripCurrentSnapshot",
                 "security": [
                     {
                         "apiKey": []
@@ -35,7 +35,7 @@
                     "contentType": "avro/binary",
                     "schemaFormat": "application/vnd.apache.avro",
                     "payload": {
-                        "$ref": "./infra/terraform/modules/schema/trips.avsc#/trips"
+                        "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripCurrentSnapshot-oport-schema.avsc"
                     },
                     "bindings": {
                         "kafka": {

@@ -13,25 +13,25 @@
     "interfaceComponents": {
         "inputPorts": [
             {
-                "description": "Through this port trip data is ingested from system A",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripsFromSystemA-iport.json"
-            },
-            {
-                "description": "Through this port trip data is ingested from system B",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripsFromSystemB-iport.json"
+                "description": "Through this port trip data is read",
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripEvent-iport.json"
             }
         ],
         "outputPorts": [
             {
-                "description": "This port expose all modifications in the status of each trip as events",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/trips-oport.json"
+                "description": "This port exposes the current snapshot of each trip in real-time",
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripCurrentSnapshot-oport.json"
+            },
+            {
+                "description": "This port tracks all the positions recorded for the vector binded to each trip in real-time",
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripRouteHistory-oport.json"
             }
         ]
     },
     "internalComponents": {
         "applicationComponents": [
             {
-                "description": "The app that processes data coming from system A and B",
+                "description": "The app that processes trip data and generates data related to trip route history and trip current snapshot in real-time",
                 "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/apps/processingapp.json"
             }
         ],
