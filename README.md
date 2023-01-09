@@ -24,6 +24,5 @@ The following resources must already exists in your confluent cloud account:
 * verify that on confluent cloud the binding between topic and schemas works: it could require the cluster to be dedicated or some properties to be specified, otherwise it could be done from the adapter by executing some CLI operations
 * verify that KSQL script works (at the moment the streams don't read any events written in the topics..) and make it more meaningful
 * understand how to treat in a single centralized place all variables used for port and asyncapi schema definitions
-* add second outputport that computes average trip duration by category (after completing first version of data product)
-* the schemas used in the topics at the moment are saved only in terraform dir and then referenced from asyncapi schema definition: is this fine?
+* the schemas used in the topics at the moment are saved in two places: inside terraform dir and inside asyncapi schema definition: how can we avoid this
 * EDIT: connection_string and security in input and output ports to specify the values related to your environment 
