@@ -7,13 +7,13 @@
     },
     "servers": {
         "test": {
-            "connectionString": "pkc-zpjg0.eu-central-1.aws.confluent.cloud:9092",
+            "connectionString": "ABC.confluent.cloud:9092",
             "description": "Confluent Cloud bootstrap servers",
             "protocol": "kafka",
             "protocolVersion": "latest",
             "bindings": {
                 "kafka": {
-                    "schemaRegistryUrl": "https://psrc-95km5.eu-central-1.aws.confluent.cloud",
+                    "schemaRegistryUrl": "https://ABC.confluent.cloud",
                     "schemaRegistryVendor": "confluent"
                 }
             }

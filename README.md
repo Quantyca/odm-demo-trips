@@ -5,12 +5,18 @@ The infrastructural component are: these topics and their schemas on Schema Regi
 The application used by this data product is made of a ksql script.
 
 **Requirements**
-
 The following resources must already exists in your confluent cloud account:
 * environment
 * kafka cluster
 * stream governance
 * ksqldb
+
+**How to**
+
+In order to create the data product you need to:
+1. Modify all port APIs and specify configuration values to connect to a specific Confluent Cloud environment
+2. Have Open Data Mesh Platform running (it uses a separate repository: **TODO: add reference to the repository**)
+3. Use Open Data Mesh Platform Data Product Experience Plane API to manage the descriptor defined in this repository by providing its URL
 
 **TO DO External**
 
