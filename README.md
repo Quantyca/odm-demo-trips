@@ -14,7 +14,7 @@ The following resources must already exists in your confluent cloud account:
 **How to**
 
 In order to create the data product you need to:
-1. Modify all port APIs and specify configuration values to connect to a specific Confluent Cloud environment
+1. Modify all port APIs, application and infrastructure definition files and specify configuration values to connect to a specific Confluent Cloud environment
 2. Have Open Data Mesh Platform running (it uses a separate repository: **TODO: add reference to the repository**)
 3. Use Open Data Mesh Platform Data Product Experience Plane API to manage the descriptor defined in this repository by providing its URL
 
