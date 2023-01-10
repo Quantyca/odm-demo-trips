@@ -15,7 +15,6 @@ The following resources must already exists in your confluent cloud account:
 **TO DO External**
 
 * develop open data mesh utility plane adapter to run KSQL scripts
-* verify if terraform templates can be processed from open data mesh utility plane from any URL or if they can only be a standalone git repository
 
 **TO DO Internal**
 
