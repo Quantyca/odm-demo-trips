@@ -21,6 +21,10 @@ The following resources must already exists in your confluent cloud account:
 * stream governance
 * ksqldb
 
+**Notes**
+In this scenario we already have a Confluent Cloud environment already equipped with its Kafka Cluster, KSQLDB and Schema Registry. It is possible of course to bind also this components to the data product definition in order to have a full isolation between data products, while in this scenario data products share the core infrastructure components and work on top of those. In fact, this data product would only aim to create the required topics, for which it is responsible, and their schemas, that would be used by the application and for governance purposes.
+The application is entirely based on KSQL scripts that would be execute inside Confluent KSQLDB. Inside its definition, in the deployInfo section, we use a custom service that calls Confluent Cloud APIs to run these scripts and that requires all the necessary configurations to connect to the Confluent Cloud environment and its components.
+
 **How to**
 
 In order to create the data product you need to:
@@ -36,3 +40,8 @@ In order to create the data product you need to:
 * check which property the utility plane adapter requires to execute KSQL scripts and add them to the application configurations
 * application definition must be completed  ( find the minimal set of configurations needed )
 * understand how to treat in a single centralized place all variables used for port and asyncapi schema definitions
+
+**Resources**
+
+* [Repository](https://github.com/Quantyca/odm-demo-trips-terraform ) containing Terraform template to provision only part of Confluent Cloud components (assuming the others already exists and are managed by someone else)
+* [Repository](https://github.com/Quantyca/odm-demo-trips-terraform-full) containing Terraform template to provision **ALL** Confluent Cloud components. Note that this repository can be useful to run some tests but the application in the data product descriptor needs to know in advance your Confluent Cloud configurations: you can’t use this terraform template on the infrastructure component of the data product since the application wouldn’t be able to know the environment variables.
