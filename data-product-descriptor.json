@@ -23,7 +23,7 @@
                 "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripCurrentSnapshot-oport.json"
             },
             {
-                "description": "This port tracks all the positions recorded for the vector binded to each trip in real-time",
+                "description": "This port tracks all the positions recorded for the vector associated to each trip in real-time",
                 "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripRouteHistory-oport.json"
             }
         ]

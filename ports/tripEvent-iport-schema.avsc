@@ -6,9 +6,20 @@
   "fields": [
     {
       "name": "tripId",
-      "type": "int",
-      "logicalType": "smallint",
-      "doc": "The unique identifier of a trip"
+      "doc": "The unique identifier of a trip",
+      "type": {
+        "type": "enum",
+        "name": "tripId",
+        "symbols": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+         "default": "1"  
+      },
+      "default": "1"  
     },
     {
       "name": "tripStatus",
@@ -18,19 +29,8 @@
         "name": "tripStatus",
         "symbols": [
           "planned",
-          "bookingstarted",
-          "bookingended",
-          "loadingstarted",
-          "loadingended",
-          "departedfromorigin",
-          "unloadingatstopstarted",
-          "unloadingatstopended",
-          "loadingatstopstarted",
-          "loadingatstopended",
-          "departedfromstop",
-          "arrivedatdestination",
-          "unloadingstarted",
-          "unloadingended",
+          "started",
+          "arrived",
           "completed"
         ],
          "default": "planned"  
@@ -39,15 +39,36 @@
     },
     {
       "name": "vectorPositionLat",
-      "type": "int",
-      "logicalType": "smallint",
-      "doc": "The latitude of the vector"
+      "doc": "The latitude of the vector",
+      "type": {
+        "type": "enum",
+        "name": "vectorPositionLat",
+        "symbols": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+         "default": "10"  
+      },
+      "default": "10"
     },
     {
       "name": "vectorPositionLong",
-      "type": "int",
-      "logicalType": "smallint",
-      "doc": "The longitude of the vector"
+      "type": {
+        "type": "enum",
+        "name": "vectorPositionLong",
+        "symbols": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+         "default": "10"  
+      },
+      "default": "10"
     },
     {
       "name": "eventTimestamp",

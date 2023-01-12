@@ -6,9 +6,20 @@
   "fields": [
     {
       "name": "tripId",
-      "type": "int",
-      "logicalType": "smallint",
-      "doc": "The unique identifier of a trip"
+      "doc": "The unique identifier of a trip",
+      "type": {
+        "type": "enum",
+        "name": "tripId",
+        "symbols": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+         "default": "1"  
+      },
+      "default": "1"  
     },
     {
       "name": "tripCurrentStatus",
@@ -18,19 +29,8 @@
         "name": "tripCurrentStatus",
         "symbols": [
           "planned",
-          "bookingstarted",
-          "bookingended",
-          "loadingstarted",
-          "loadingended",
-          "departedfromorigin",
-          "unloadingatstopstarted",
-          "unloadingatstopended",
-          "loadingatstopstarted",
-          "loadingatstopended",
-          "departedfromstop",
-          "arrivedatdestination",
-          "unloadingstarted",
-          "unloadingended",
+          "started",
+          "arrived",
           "completed"
         ],
          "default": "planned"  
@@ -39,15 +39,37 @@
     },
     {
       "name": "vectorCurrentPositionLat",
-      "type": "int",
-      "logicalType": "smallint",
-      "doc": "The current latitude of the vector"
+      "doc": "The current latitude of the vector",
+      "type": {
+        "type": "enum",
+        "name": "vectorCurrentPositionLat",
+        "symbols": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+         "default": "10"  
+      },
+      "default": "10"
     },
     {
       "name": "vectorCurrentPositionLong",
-      "type": "int",
-      "logicalType": "smallint",
-      "doc": "The current longitude of the vector"
+      "doc": "The current longitude of the vector",
+      "type": {
+        "type": "enum",
+        "name": "vectorCurrentPositionLong",
+        "symbols": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+         "default": "10"  
+      },
+      "default": "10"
     },
     {
       "name": "eventTimestamp",
