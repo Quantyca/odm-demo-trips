@@ -28,8 +28,28 @@ The application is entirely based on KSQL scripts that would be execute inside C
 **How to**
 
 In order to create the data product you need to:
+
 1. Modify all port APIs, application and infrastructure definition files and specify configuration values to connect to a specific Confluent Cloud environment
-3. Use Open Data Mesh Platform Data Product Experience Plane API to manage the descriptor defined in this repository
+2. Use Open Data Mesh Platform Data Product Experience Plane API to manage the descriptor defined in this repository
+
+After deploying the data product you need to do some further actions directly on confluent cloud. First of all, you need to setup a connector to generate sample data:
+
+1. Connect to your confluent cloud and select the environment and kafka cluster specified in the configurations
+2. From the panel on the left, open "Connectors" tab and select *Datagen source*
+3. Configure *Datagen source* to write data to *tripEvent* topic
+4. Configure *Datagen source* to create Global access API credentials
+5. Configure *Datagen source* to use *Avro* as outputrecord value format and for template choose *Use schema string instead*
+6. As *schema string* paste the content of file *tripEvent-iport-schema.avsc*
+7. Continue untile the connector is created and correctly generates data to tripEvent topic with the schema specified
+
+To enable KSQLDB to read data from the tripEvent topic do the following:
+
+1. from the panel on the left click on *KSQLDB*
+2. click on your ksqldb instance
+3. open *settings* tab
+4. click on *access* option
+5. allow access for *tripEvent*, *tripRouteHistory* and *tripCurrentSnapshot* topics
+
 
 **TO DO External**
 

@@ -11,15 +11,15 @@
         "type": "enum",
         "name": "tripId",
         "symbols": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
         ],
-         "default": "1"  
+         "default": "T1"  
       },
-      "default": "1"  
+      "default": "T1"  
     },
     {
       "name": "tripStatus",
@@ -44,15 +44,15 @@
         "type": "enum",
         "name": "vectorPositionLat",
         "symbols": [
-          "10",
-          "15",
-          "20",
-          "25",
-          "30"
+          "L10",
+          "L15",
+          "L20",
+          "L25",
+          "L30"
         ],
-         "default": "10"  
+         "default": "L10"  
       },
-      "default": "10"
+      "default": "L10"
     },
     {
       "name": "vectorPositionLong",
@@ -60,15 +60,15 @@
         "type": "enum",
         "name": "vectorPositionLong",
         "symbols": [
-          "10",
-          "15",
-          "20",
-          "25",
-          "30"
+          "L10",
+          "L15",
+          "L20",
+          "L25",
+          "L30"
         ],
-         "default": "10"  
+         "default": "L10"  
       },
-      "default": "10"
+      "default": "L10"
     },
     {
       "name": "eventTimestamp",
