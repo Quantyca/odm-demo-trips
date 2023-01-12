@@ -24,6 +24,7 @@ The following resources must already exists in your confluent cloud account:
 **Notes**
 In this scenario we already have a Confluent Cloud environment already equipped with its Kafka Cluster, KSQLDB and Schema Registry. It is possible of course to bind also this components to the data product definition in order to have a full isolation between data products, while in this scenario data products share the core infrastructure components and work on top of those. In fact, this data product would only aim to create the required topics, for which it is responsible, and their schemas, that would be used by the application and for governance purposes.
 The application is entirely based on KSQL scripts that would be execute inside Confluent KSQLDB. Inside its definition, in the deployInfo section, we use a custom service that calls Confluent Cloud APIs to run these scripts and that requires all the necessary configurations to connect to the Confluent Cloud environment and its components.
+The schema for *tripEvent* at the moment is created by the *Confluent Datagen* source connector and for this reason it is not created by Terraform.
 
 **How to**
 
