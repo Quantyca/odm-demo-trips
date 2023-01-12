@@ -8,7 +8,7 @@ The data product to implement this use case has three ports:
 * the output port *tripRouteHistory* tracks all the positions recorded for the vector binded to each trip in real-time
 
 While its internal components are: 
-* an infrastructure based on Confluent Cloud - a topic to collect data coming from the input port, a KTable to contain data for the first output port and a KStream for the third port
+* an infrastructure based on Confluent Cloud - three topics, one to collect data coming from the input port, one associated to a KTable to contain data for the first output port and one for a KStream for the third port
 * an application based on KSQL
 
 The infrastructure is provisioned thanks to a terraform template saved on a separate repository and referenced by the descriptor.
@@ -30,8 +30,13 @@ The schema for *tripEvent* at the moment is created by the *Confluent Datagen* s
 
 In order to create the data product you need to:
 
-1. Modify all port APIs, application and infrastructure definition files and specify configuration values to connect to a specific Confluent Cloud environment
-2. Use Open Data Mesh Platform Data Product Experience Plane API to manage the descriptor defined in this repository
+1. Specify configuration values to connect to a specific Confluent Cloud environment in the following sections of the descriptor:
+    * *apps/processingapp.json* - the configurations section must have all the values defined for each variable
+    * *infra/confluentcloud.json* - the configurations section must have all the values defined for each variable
+    * *tripCurrentSnapshot-oport-api.json* - sections *servers* and *security* must define values for confluent components
+    * *tripRouteHistory-oport-api.json* - sections *servers* and *security* must define values for confluent components
+    * *tripEvent-iport-api.json* - sections *servers* and *security* must define values for confluent components
+2. Use the **Open Data Mesh Platform** *Data Product Experience Plane* APIs to manage the descriptor defined in this repository
 
 After deploying the data product you need to do some further actions directly on confluent cloud. First of all, you need to setup a connector to generate sample data:
 
@@ -54,13 +59,13 @@ To enable KSQLDB to read data from the tripEvent topic do the following:
 
 **TO DO External**
 
-* develop open data mesh utility plane adapter to run KSQL scripts
+* develop an application to run commands against a confluent cloud cluster (ksql scripts or admin tasks)
 
 **TO DO Internal**
 
-* check which property the utility plane adapter requires to execute KSQL scripts and add them to the application configurations
-* application definition must be completed  ( find the minimal set of configurations needed )
-* understand how to treat in a single centralized place all variables used for port and asyncapi schema definitions
+* verify that all the configurations needed by the terraform template are listed in the infrastructure component
+* without the application to run commands against a confluent cloud cluster, the application can't be executed automatically and the ksql code must be run manually on KSQLDB. Furthermore, when this application will be available you must assign all the required values to the application configuration
+* find a way to treat all configuration values for the descriptor in a single centralized place (components?)
 
 **Resources**
 
