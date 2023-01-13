@@ -1,8 +1,8 @@
 {
     "dataProductDescriptor": "1.0.0",
     "info": {
-        "name": "realtimetrip",
-        "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:realtimetrip:1",
+        "name": "trackandtrace",
+        "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:1",
         "version": "1.0.0",
         "domain": "Transport Management",
         "owner": {

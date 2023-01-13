@@ -1,5 +1,5 @@
 {
-    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:tripExecution:1:infrastructure:eventStore",
+    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:1:infrastructure:eventStore",
     "version": "1.0.1",
     "description": "The kafka topics topology required to store events acquired from external systems and new events genereted by the application",
     "platform": "centraleurope.aws:confluent",

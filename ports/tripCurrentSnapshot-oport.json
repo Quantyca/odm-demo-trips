@@ -1,5 +1,5 @@
 {
-    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:realtimetrip:1:outputports:tripCurrentSnapshot",
+    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:1:outputports:tripCurrentSnapshot",
     "entityType": "outputport",
     "name": "tripCurrentSnapshot",
     "version": "1.0.0",
