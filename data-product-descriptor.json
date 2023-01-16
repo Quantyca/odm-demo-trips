@@ -2,7 +2,7 @@
     "dataProductDescriptor": "1.0.0",
     "info": {
         "name": "trackandtrace",
-        "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:1",
+        "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace",
         "version": "1.0.0",
         "domain": "Transport Management",
         "owner": {
@@ -14,17 +14,17 @@
         "inputPorts": [
             {
                 "description": "Through this port trip data is read",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripEvent-iport.json"
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/3b02e863c15501f86b294d8361736de4116cfae2/ports/tripEvent-iport.json"
             }
         ],
         "outputPorts": [
             {
                 "description": "This port exposes the current snapshot of each trip in real-time",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripCurrentSnapshot-oport.json"
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/3b02e863c15501f86b294d8361736de4116cfae2/ports/tripCurrentSnapshot-oport.json"
             },
             {
                 "description": "This port tracks all the positions recorded for the vector associated to each trip in real-time",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripRouteHistory-oport.json"
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/3b02e863c15501f86b294d8361736de4116cfae2/ports/tripRouteHistory-oport.json"
             }
         ]
     },
@@ -32,13 +32,13 @@
         "applicationComponents": [
             {
                 "description": "The app that processes trip data and generates data related to trip route history and trip current snapshot in real-time",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/apps/processingapp.json"
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/3b02e863c15501f86b294d8361736de4116cfae2/apps/processingapp.json"
             }
         ],
         "infrastructuralComponents": [
             {
                 "description": "Confluent Cloud platform is used to store all the events, their schemas and that let the app do some processing",
-                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/infra/confluentcloud.json"
+                "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/3b02e863c15501f86b294d8361736de4116cfae2/infra/confluentcloud.json"
             }
         ]
     }

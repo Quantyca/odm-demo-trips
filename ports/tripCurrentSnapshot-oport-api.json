@@ -35,7 +35,7 @@
                     "contentType": "avro/binary",
                     "schemaFormat": "application/vnd.apache.avro",
                     "payload": {
-                        "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/main/ports/tripCurrentSnapshot-oport-schema.avsc"
+                        "$ref": "https://github.com/Quantyca/odm-demo-trips/blob/3b02e863c15501f86b294d8361736de4116cfae2/ports/tripCurrentSnapshot-oport-schema.avsc"
                     },
                     "bindings": {
                         "kafka": {

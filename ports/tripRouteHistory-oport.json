@@ -1,5 +1,5 @@
 {
-    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:1:outputports:tripRouteHistory",
+    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:outputports:tripRouteHistory",
     "entityType": "outputport",
     "name": "tripRouteHistory",
     "version": "1.0.0",

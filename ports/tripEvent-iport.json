@@ -1,5 +1,5 @@
 {
-    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:1:inputports:tripEvent",
+    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:inputports:tripEvent",
     "entityType": "inputport",
     "name": "tripEvent",
     "version": "1.0.0",
