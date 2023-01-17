@@ -5,6 +5,12 @@
     "platform": "centraleurope.aws:confluent",
     "applicationType":"stream-processing",
     "buildInfo": {
+        "service": {
+        },
+        "template": {
+        },
+        "configurations": {
+        }
     },
     "deployInfo": {
         "service": {
