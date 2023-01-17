@@ -11,16 +11,16 @@
             "$href": "https://github.com/Quantyca/odm-demo-trips-terraform.git"
        },
         "configurations": {
-            "TF_VAR_env_id": "ABC",
-            "TF_VAR_cluster_id": "ABC",
-            "TF_VAR_rest_endpoint": "https://ABC.confluent.cloud:443",
-            "TF_VAR_confluent_cloud_api_key": "ABC",
-            "TF_VAR_confluent_cloud_api_secret": "ABC",
-            "TF_VAR_kafka_api_key": "ABC",
-            "TF_VAR_kafka_api_secret": "ABC",
-            "TF_VAR_schema_registry_url": "https://ABC.confluent.cloud",
-            "TF_VAR_schema_registry_key": "ABC",
-            "TF_VAR_schema_registry_secret": "ABC"
+            "TF_VAR_env_id": "env-9k6oxm",
+            "TF_VAR_cluster_id": "lkc-prjy2k",
+            "TF_VAR_rest_endpoint": "https://pkc-zpjg0.eu-central-1.aws.confluent.cloud:443",
+            "TF_VAR_confluent_cloud_api_key": "D2BQPQIWGEVF6RXO",
+            "TF_VAR_confluent_cloud_api_secret": "E5EWjVFfkv9qCZEpMCwQv3yxPeruVPfSXBSX6XT6/0I8STCY1+tK0DLGMcA8DJd2",
+            "TF_VAR_kafka_api_key": "4KC7HNMAR67AZQSR",
+            "TF_VAR_kafka_api_secret": "E5iMaZtzJb3b5G2/pfcM3WPQC/nsKHJqiY7I3nrQHEjoADpghDtOQHxgrvZEMS9d",
+            "TF_VAR_schema_registry_url": "https://psrc-95km5.eu-central-1.aws.confluent.cloud",
+            "TF_VAR_schema_registry_key": "NLA3IQSY4X4XBUWO",
+            "TF_VAR_schema_registry_secret": "att7eHzm4OONDH7kfxjBgPPZS0YILKtowwAzyqhVFG8R+7xytxDL/N9gsd+4iNh6"
         }
     }
 } 
