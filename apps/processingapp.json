@@ -5,18 +5,21 @@
     "platform": "centraleurope.aws:confluent",
     "applicationType":"stream-processing",
     "buildInfo": {
-        "service": {
-        },
+        "service": "terraform",
         "template": {
-        },
-        "configurations": {
-        }
+            "mediaType": "text/terraformfile",
+            "$href": "https://github.com/Quantyca/odm-demo-trips-terraform.git"
+       },
+       "configurations": {
+           "TF_VAR_env_id": "ABC"
+       }
     },
     "deployInfo": {
-        "service": {
-        },
+        "service": "terraform",
         "template": {
-        },
+            "mediaType": "text/terraformfile",
+            "$href": "https://github.com/Quantyca/odm-demo-trips-terraform.git"
+       },
         "configurations": {
             "TF_VAR_env_id": "ABC",
             "TF_VAR_cluster_id": "ABC",
