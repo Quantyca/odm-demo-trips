@@ -8,8 +8,12 @@
     },
     "deployInfo": {
         "service": {
+            "mediaType": "application",
+            "$href": "https://jenkins.company-xyz.com/api/v1/planes/utility/integration-services/builds"
         },
         "template": {
+            "mediaType": "text/jenkinsfile",
+            "$href": "https://github.com/opendatamesh-initiative/cd-ingestion-app/blob/main/jenkinsfile"
         },
         "configurations": {
             "TF_VAR_env_id": "ABC",
