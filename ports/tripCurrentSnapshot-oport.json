@@ -53,7 +53,7 @@
             "description": "A detailed description of the data product, that include also the target audience",
             "externalDocs": {
                 "mediaType": "text/html",
-                "$href": "https://wiki.example-xyz.com/corporate-mesh/dp/trips.html#terms-and-conditions"
+                "$href": ""
             }
         },
         "billingPolicy": {
