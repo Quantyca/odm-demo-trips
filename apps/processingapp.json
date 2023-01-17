@@ -1,5 +1,5 @@
 {
-    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:1:applications:processingapp",
+    "fullyQualifiedName": "urn:dpds:com.company-xyz:dataproducts:trackandtrace:applications:processingapp",
     "version": "1.0.0",
     "description": "The app that processes trip events incoming from different systems",
     "platform": "centraleurope.aws:confluent",
