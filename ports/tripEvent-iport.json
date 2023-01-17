@@ -13,7 +13,7 @@
             "version": "2.5.0",
             "definition": {
                 "mediaType": "text/json",
-                "$href": "https://raw.githubusercontent.com/Quantyca/odm-demo-trips/3b02e863c15501f86b294d8361736de4116cfae2/ports/tripEvent-iport-api.json"
+                "$href": "https://raw.githubusercontent.com/Quantyca/odm-demo-trips/main/ports/tripEvent-iport-api.json"
             },
             "externalDocs": {
                 "description": "The AsyncAPI v2.5.0 specification used to define the API of this port",
