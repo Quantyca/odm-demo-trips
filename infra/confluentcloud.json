@@ -8,7 +8,7 @@
         "service": {
           "description": "Provision Service URL",
           "mediaType": "application",
-          "$href": "http://192.168.1.4:8081/api/v1/planes/utility/provision-services/runs"
+          "$href": "http://1192.168.5.146:8081/api/v1/planes/utility/provision-services/runs"
         },
         "template": {
             "description": "Terraform template for odm demo trips",
